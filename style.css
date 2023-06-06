@@ -1,0 +1,763 @@
+@import url('https://fonts.googleapis.com/css2?family=Ubuntu:wght@400;500;700&display=swap');
+
+* {
+    margin: 10px;
+    padding: 0;
+}
+
+#container {
+    width: 95vw;
+    height: 95vh;
+    display: flex;
+    font-family: 'Ubuntu', sans-serif;
+}
+
+#sideBar {
+    background: url(./assets/images/bg-sidebar-desktop.svg) no-repeat;
+    background-size: 430px;
+    width: 40%;
+    height: 100%;
+    margin-left: 30px;
+    display: flex;
+    flex-direction: column;
+    border-radius: 10px;
+}
+
+#sideBar div {
+    display: flex;
+    align-items: center;
+    height: 10%;
+    margin-left: 8%;
+}
+
+#sideBar div h1 {
+    color: hsl(217, 100%, 97%);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 2px solid hsl(229, 24%, 87%);
+    width: 50px;
+    height: 50px;
+    border-radius: 30px;
+}
+
+#sideBar div #page1 {
+    color: hsl(213, 96%, 18%);
+    background-color: hsl(206, 94%, 87%);
+    border: none;
+}
+
+#sideBar div ul li {
+    list-style: none;
+    color: hsl(229, 24%, 87%);
+    text-transform: uppercase;
+}
+
+#sideBar div ul h3 {
+    color: hsl(217, 100%, 97%);
+    text-transform: uppercase;
+}
+
+#mainSection {
+    width: 60%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+#mainSection #step1 {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    margin-top: 5%;
+    margin-left: 5%;
+}
+
+#mainSection #step2 {
+    width: 100%;
+    height: 100%;
+    display: none;
+    flex-direction: column;
+    margin-top: 5%;
+    margin-left: 5%;
+}
+
+#mainSection #step3 {
+    width: 100%;
+    height: 100%;
+    display: none;
+    flex-direction: column;
+    margin-top: 5%;
+    margin-left: 5%;
+}
+
+#mainSection #step4 {
+    width: 100%;
+    height: 100%;
+    display: none;
+    flex-direction: column;
+    margin-top: 5%;
+    margin-left: 5%;
+}
+
+#mainSection #step5 {
+    width: 100%;
+    height: 100%;
+    display: none;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+#mainSection #step1 h1,
+#mainSection #step2 h1,
+#mainSection #step3 h1,
+#mainSection #step4 h1 {
+    color: hsl(213, 96%, 18%);
+    font-size: 2.7rem;
+    font-weight: 700;
+}
+
+#mainSection #step1 p,
+#mainSection #step2 p,
+#mainSection #step3 p,
+#mainSection #step4 p {
+    color: hsl(231, 11%, 63%);
+    font-size: 1.3rem;
+    margin-bottom: 30px;
+    word-spacing: 5px;
+}
+
+#mainSection #step1 .validation {
+    display: flex;
+    justify-content: space-between;
+    width: 78%;
+    margin: 0;
+}
+
+#mainSection #step1 .validation h3 {
+    margin-top: 30px;
+    color: hsl(213, 96%, 18%);
+    font-weight: 500;
+}
+
+#mainSection #step1 .validation small {
+    display: none;
+    align-items: flex-end;
+    color: hsl(354, 84%, 57%);
+    font-size: 1.1rem;
+    font-weight: 500;
+}
+
+#mainSection #step1 input {
+    display: block;
+    width: 75%;
+    height: 7%;
+    margin-top: 0;
+    margin-bottom: 20px;
+    color: hsl(213, 96%, 18%);
+    padding-left: 20px;
+    font-size: 1.2rem;
+    font-weight: 700;
+    border-radius: 10px;
+    border: 1px solid hsl(229, 24%, 87%);
+    outline: none;
+}
+
+#mainSection #step1 input:focus{
+    border: 1px solid hsl(243, 100%, 62%);
+}
+
+/* removing scroll arrows from  number input */
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+    display: none;
+}
+
+#btn1,
+#btn2,
+#btn3,
+#btn4 {
+    width: 74%;
+    height: 10%;
+    display: flex;
+    justify-content: right;
+    align-items: center;
+    margin-top: 13%;
+}
+
+#btn2,
+#btn3,
+#btn4 {
+    justify-content: space-between;
+}
+
+#prevBtn2,
+#prevBtn3,
+#prevBtn4 {
+    color: hsl(231, 11%, 63%);
+    font-size: 1.2rem;
+    font-weight: 700;
+    cursor: pointer;
+}
+
+#prevBtn2:hover,
+#prevBtn3:hover,
+#prevBtn4:hover{
+    color: hsl(213, 96%, 18%);
+}
+
+#nextBtn1,
+#nextBtn2,
+#nextBtn3,
+#confirmBtn {
+    width: 18%;
+    height: 70%;
+    font-weight: 500;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 10px;
+    border: none;
+    background-color: hsl(213, 96%, 18%);
+    color: hsl(231, 100%, 99%);
+    font-size: 1.1rem;
+    cursor: pointer;
+}
+
+#confirmBtn{
+    background-color: hsl(243, 100%, 62%);
+}
+
+#confirmBtn:hover{
+    opacity: 0.7;
+}
+
+#mainSection #step2 .category {
+    display: flex;
+    width: 100%;
+    height: 30%;
+    margin-top: 3%;
+}
+
+#arcade,#advance,#pro {
+    display: flex;
+    flex-direction: column;
+    width: 21%;
+    height: 100%;
+    padding-left: 20px;
+    border: 1px solid hsl(229, 24%, 87%);
+    border-radius: 15px;
+    cursor: pointer;
+    /* background-color: hsl(231, 100%, 99%); */
+}
+
+#mainSection #step2 .category #arcade{
+    border: 1px solid rgb(71, 61, 255);
+    background-color: hsl(231, 100%, 99%);
+}
+
+#mainSection #step2 .category #advance:hover,
+#mainSection #step2 .category #pro:hover{
+    border: 1px solid hsl(243, 100%, 62%);
+    background-color: hsl(231, 100%, 99%);
+}
+
+#mainSection #step2 .category div .icon {
+    width: 50%;
+    height: 50%;
+    margin-left: 0;
+    padding-left: 0;
+    border: none;
+}
+
+#mainSection #step2 .category div .icon svg {
+    width: 60px;
+    height: 60px;
+}
+
+#mainSection #step2 .category h4 {
+    color: hsl(213, 96%, 18%);
+    font-size: 1.3rem;
+    font-weight: 500;
+}
+
+#mainSection #step2 .category h5 {
+    margin-top: 0;
+    color: hsl(231, 11%, 63%);
+    font-size: 1.05rem;
+}
+
+#mainSection #step2 .category h6 {
+    margin-top: 0;
+    color: hsl(213, 96%, 18%);
+    font-size: 1rem;
+    font-weight: 500;
+}
+
+#mainSection #step2 .choice {
+    width: 74%;
+    height: 8%;
+    margin-top: 80px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: hsl(231, 11%, 63%);
+    gap: 20px;
+    border-radius: 7px;
+    background-color: hsl(217, 100%, 97%);
+}
+
+#mainSection #step2 .choice h5 {
+    font-size: 1.1rem;
+    font-weight: 500;
+}
+
+.mainYear{
+    color: hsl(213, 96%, 18%);
+}
+
+.monthToggle{
+    color: hsl(213, 96%, 18%);
+}
+.yearToggle{
+    color: hsl(231, 11%, 63%);
+}
+
+#switchBtn {
+    position: relative;
+    display: flex;
+    width: 70px;
+    height: 45px;
+}
+
+#switchBtn input {
+    opacity: 0;
+    width: 0;
+    height: 0;
+}
+
+.slider {
+    height: 50%;
+    display: flex;
+    align-items: center;
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    border-radius: 34px;
+    background-color: hsl(213, 96%, 18%);
+    -webkit-transition: .4s;
+    transition: .4s;
+}
+
+.slider:before {
+    position: absolute;
+    content: "";
+    height: 15px;
+    width: 15px;
+    border-radius: 50%;
+    left: 4px;
+    bottom: 4px;
+    background-color: white;
+    -webkit-transition: .4s;
+    transition: .4s;
+}
+
+/* input:checked+.slider:before {
+    -webkit-transform: translateX(26px);
+    -ms-transform: translateX(26px);
+    transform: translateX(26px);
+} */
+
+#addOns1,
+#addOns2,
+#addOns3 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 74%;
+    height: 12%;
+    border: 1px solid hsl(231, 11%, 63%);
+    /* background-color: hsl(231, 100%, 99%); */
+    border-radius: 10px;
+    margin-top: 3%;
+    cursor: pointer;
+}
+
+#addOns1:hover,
+#addOns2:hover,
+#addOns3:hover {
+    border: 1px solid hsl(243, 100%, 62%);
+}
+
+.addOnToggle{
+    border: 1px solid hsl(243, 100%, 62%) !important;
+    background-color: hsl(231, 100%, 99%);
+}
+
+#check1,#check2,#check3{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 30px;
+    height: 30px;
+    border-radius: 5px;
+    border: 1px solid hsl(231, 11%, 63%);
+    cursor: pointer;
+}
+
+#svg1,#svg2,#svg3
+{
+    display: none;
+    width: auto;
+    height: auto;
+    margin: 0;
+    border-radius: 5px;
+}
+
+.svgToggle{
+    border: none !important;
+    display: flex !important;
+}
+
+
+#addOns1 ul,#addOns2 ul,#addOns3 ul {
+    width: 70%;
+    height: 80%;
+    margin-left: 30px;
+}
+
+#addOns1 ul h3,#addOns2 ul h3,#addOns3 ul h3 {
+    color: hsl(213, 96%, 18%);
+    font-weight: 500;
+}
+
+#addOns1 ul p,#addOns2 ul p,#addOns3 ul p {
+    font-weight: 400;
+}
+
+#addOns1 h6,#addOns2 h6,#addOns3 h6 {
+    color: hsl(243, 100%, 62%);
+    font-size: 1.1rem;
+    font-weight: 500;
+}
+
+
+#mainSection #step4 #services{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 74%;
+    height: 45%;
+    background-color: hsl(217, 100%, 97%);
+    border-radius: 20px;
+}
+
+#mainSection #step4 #subscription{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    width: 90%;
+    height: 45%;
+    border-bottom: 1px solid hsl(229, 24%, 87%);
+}
+
+#mainSection #step4 #subscription span{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
+
+#mainSection #step4 #subscription span h3{
+    color: hsl(213, 96%, 18%);
+    margin-bottom: 0;
+    font-weight: 500;
+}
+
+#change{
+    color: hsl(231, 11%, 63%);
+    cursor: pointer;
+    text-decoration: underline;
+    margin-top: 0;
+    font-size: 1.05rem;
+    font-weight: 500;
+}
+
+#change:hover{
+    color: hsl(243, 100%, 62%);
+}
+
+#selectedPrice{
+    color: hsl(213, 96%, 18%);
+    font-size: 1.3rem;
+}
+
+#mainSection #step4 #addOns{
+    display: flex;
+    flex-direction: column;
+    width: 90%;
+    height: 55%;
+    align-items: center;
+    justify-content: center;
+}
+
+#mainSection #step4 #addOns span{
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    color: hsl(231, 11%, 63%);
+    font-weight: 400;
+}
+
+#mainSection #step4 #addOns span h4{
+    font-size: 1.1rem;
+    font-weight: 400;
+}
+
+#mainSection #step4 #addOns span h5{
+    color: hsl(213, 96%, 18%);
+    font-size: 1rem;
+    font-weight: 400;
+}
+
+#mainSection #step4 #total{
+    display: flex;
+    justify-content: space-between;
+    width: 67%;
+    height: 10%;
+    margin-left: 50px;
+    color: hsl(231, 11%, 63%);
+}
+
+#mainSection #step4 #total h4{
+    font-weight: 400;
+    font-size: 1.2rem;
+}
+
+#mainSection #step4 #total h5{
+    font-size: 1.3rem;
+    color: hsl(243, 100%, 62%);
+}
+
+#mainSection #step5 svg{
+    width: 20%;
+    height: 20%;
+}
+
+#mainSection #step5 h1{
+    color: hsl(213, 96%, 18%);
+    font-size: 3.5rem;
+}
+
+#mainSection #step5 p{
+    color: hsl(231, 11%, 63%);
+    font-size: 1.3rem;
+    width: 60%;
+    line-height: 1.5;
+    word-spacing: 5px;
+    text-align: center;
+}
+
+.attribution {
+    font-size: 11px;
+    text-align: center;
+}
+
+.attribution a {
+    color: hsl(228, 45%, 44%);
+}
+
+@media(max-width:375px){
+    *{
+        margin: 0;
+        padding: 0;
+    }
+
+    #container{
+        width: auto;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    #sideBar{
+        width: 100%;
+        height: 25%;
+        flex-direction: row;
+        justify-content: center;
+        margin: 0;
+        border-radius: 0;
+        background: url(./assets/images/bg-sidebar-mobile.svg) no-repeat;
+        background-size: cover;
+        position: absolute;
+    }
+
+    #sideBar div{
+        margin: 10px;
+    }
+
+    #sideBar div ul{
+        display: none;
+    }
+
+    #sideBar div h1{
+        margin-top: 60px;
+    }
+
+    #mainSection{
+        width: 100%;
+        align-items: center;
+        margin-top: 40%;
+        background-color: hsl(206, 94%, 87%);
+    }
+
+    #mainSection #step1{
+        width: 85%;
+        height: 90%;
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+        background-color: hsl(231, 100%, 99%);
+        border-radius: 15px;
+        z-index: 1;
+        margin: 0;
+        padding: 15px;
+    }
+
+    #mainSection #step2{
+        width: 85%;
+        height: 90%;
+        display: none;
+        justify-content: center;
+        flex-direction: column;
+        background-color: hsl(231, 100%, 99%);
+        border-radius: 15px;
+        z-index: 1;
+        margin: 0;
+        padding: 15px;
+    }
+
+    #mainSection #step3{
+        width: 85%;
+        height: 90%;
+        display: none;
+        justify-content: center;
+        flex-direction: column;
+        background-color: hsl(231, 100%, 99%);
+        border-radius: 15px;
+        z-index: 1;
+        margin: 0;
+        padding: 15px;
+    }
+
+    #mainSection #step4{
+        width: 85%;
+        height: 90%;
+        display: none;
+        justify-content: center;
+        flex-direction: column;
+        background-color: hsl(231, 100%, 99%);
+        border-radius: 15px;
+        z-index: 1;
+        margin: 0;
+        padding: 15px;
+    }
+
+    #mainSection #step5{
+        width: 85%;
+        height: 90%;
+        display: none;
+        justify-content: center;
+        flex-direction: column;
+        background-color: hsl(231, 100%, 99%);
+        border-radius: 15px;
+        z-index: 1;
+        margin: 0;
+        padding: 15px;
+    }
+
+    #btn1,#btn2,
+    #btn3,
+    #btn4{
+        position: absolute;
+        top: 90%;
+    }
+
+    #nextBtn1,#nextBtn2,
+    #nextBtn3,
+    #confirmBtn{
+        width: 30%;
+    }
+
+    #mainSection #step2 .category{
+        flex-direction: column;
+    }
+
+    #mainSection #step2 .category div{
+        flex-direction: row;
+        width: 80%;
+        height: 50%;
+    }
+
+    #arcade,#advance,#pro{
+        margin-top: 8px;
+        margin-bottom: 8px;
+        padding: 5px;
+    }
+
+    #mainSection #step2 .category div .icon svg{
+        width: 50px;
+        height: 50px;
+    }
+
+    #mainSection #step2 .choice{
+        width: 80%;
+    }
+
+    #switchBtn{
+        width: 50px;
+    }
+
+    #addOns1,
+    #addOns2,
+    #addOns3 {
+    width: 100%;
+    padding: 5px;
+    height: 15%;
+    }
+
+    #mainSection #step4 #services{
+        width: 100%;
+    }
+
+    #mainSection #step4 #addOns span h4,#mainSection #step4 #addOns span h5{
+        margin-top: 5px;
+        margin-bottom: 5px;
+    }
+
+    #mainSection #step4 #total{
+        width: 90%;
+        margin-left: 20px;
+    }
+
+    #mainSection #step5 h1{
+        font-size: 2rem;
+    }
+
+    #mainSection #step5 p{
+        width: 100%;
+    }
+
+    .attribution{
+        position: absolute;
+        top: 5px;
+        color: hsl(217, 100%, 97%);
+    }
+
+    .attribution a{
+        color: hsl(354, 84%, 57%);
+    }
+}
